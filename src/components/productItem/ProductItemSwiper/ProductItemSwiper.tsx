@@ -1,38 +1,104 @@
-import React, {useState} from "react";
-import {Swiper, SwiperSlide} from "swiper/react";
-import {Navigation, Thumbs} from "swiper/modules";
+import React, { useState, useEffect, useRef } from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Thumbs } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/thumbs";
 import "./ProductItemSwiper.css";
-import {productImagesConfig} from "../../../data/productImagesConfig";
-import {ProductData} from "../../../utils/getProductData";
+import { productImagesConfig } from "../../../data/productImagesConfig";
+import { ProductData } from "../../../utils/getProductData";
 
 interface ProductItemSwiperProps {
   productData: ProductData;
+  galleryImages?: string[] | null; // для подтоваров, если нужно
+  besides?: ProductData["besides"]; // массив besides из продукта
+  selectedBesidesIndex?: number; // индекс выбранного besides для переключения слайда
 }
 
-const ProductItemSwiper: React.FC<ProductItemSwiperProps> = ({productData}) => {
+const ProductItemSwiper: React.FC<ProductItemSwiperProps> = ({
+  productData,
+  galleryImages,
+  besides,
+  selectedBesidesIndex = -1,
+}) => {
   const [thumbsSwiper, setThumbsSwiper] = useState<any>(null);
+  const mainSwiperRef = useRef<any>(null);
 
-  const getProductImages = (index: number) => {
-    const config = productImagesConfig[index];
+  // 1. Получаем дефолтные картинки продукта (если galleryImages нет)
+  const defaultImages = (() => {
+    if (galleryImages && galleryImages.length > 0) return galleryImages;
+
+    const config = productImagesConfig[productData.index];
     if (!config) {
-      console.error(`No images config found for product ${index}`);
+      console.error(`No images config found for product ${productData.index}`);
       return [];
     }
-    return config.images.map((name) => `/product-images-all/${index}/${name}`);
-  };
+    return config.images.map(
+      (name) => `/product-images-all/${productData.index}/${name}`
+    );
+  })();
 
-  const images = getProductImages(productData.index);
+  // 2. Собираем все картинки без дублирования
+  const allImages: string[] = [];
+  const besidesStartIndices: number[] = [];
+  const seenImages = new Set<string>();
 
-  if (images.length === 0) {
+  // Добавляем дефолтные картинки
+  defaultImages.forEach((img) => {
+    const normalized = img.trim().toLowerCase();
+    if (!seenImages.has(normalized)) {
+      seenImages.add(normalized);
+      allImages.push(img);
+    }
+  });
+
+  // Добавляем картинки besides
+  besides?.forEach((besideItem, idx) => {
+    besidesStartIndices[idx] = allImages.length;
+
+    besideItem.productImgList.forEach((img) => {
+      const normalized = img.trim().toLowerCase();
+      if (!seenImages.has(normalized)) {
+        seenImages.add(normalized);
+        allImages.push(img);
+      }
+    });
+  });
+
+  // 3. При изменении selectedBesidesIndex переключаем слайдер на нужный слайд
+  useEffect(() => {
+    if (
+      mainSwiperRef.current &&
+      selectedBesidesIndex >= 0 &&
+      besides &&
+      besides[selectedBesidesIndex]
+    ) {
+      // Получаем первую картинку выбранного besides
+      const firstBesidesImg = besides[selectedBesidesIndex].productImgList[0];
+
+      // Ищем её индекс в дефолтных картинках
+      const defaultIndex = defaultImages.findIndex((img) => img === firstBesidesImg);
+
+      if (defaultIndex !== -1) {
+        // Если нашли такую картинку в дефолтных — переключаемся на неё
+        mainSwiperRef.current.slideToLoop(defaultIndex);
+      } else {
+        // Если не нашли, переключаемся на начало besides
+        const startIndex = besidesStartIndices[selectedBesidesIndex];
+        if (startIndex !== undefined) {
+          mainSwiperRef.current.slideToLoop(startIndex);
+        }
+      }
+    }
+  }, [selectedBesidesIndex, besidesStartIndices, besides, defaultImages]);
+
+  if (allImages.length === 0) {
     return <div>No images found for this product</div>;
   }
 
   return (
     <div className="product-item__gallery product-item__container swiper-and-info-section">
-      <div className="product-item__swiper" style={{position: "relative"}}>
+      <div className="product-item__swiper" style={{ position: "relative" }}>
         <Swiper
           modules={[Navigation, Thumbs]}
           navigation={{
@@ -40,22 +106,23 @@ const ProductItemSwiper: React.FC<ProductItemSwiperProps> = ({productData}) => {
             nextEl: ".swiper-button-custom.swiper-button-next",
           }}
           onInit={(swiper) => {
-            // @ts-expect-error Swiper types are incomplete for navigation params
+            // @ts-expect-error
             swiper.params.navigation.prevEl =
               ".swiper-button-custom.swiper-button-prev";
-            // @ts-expect-error Swiper types are incomplete for navigation params
+            // @ts-expect-error
             swiper.params.navigation.nextEl =
               ".swiper-button-custom.swiper-button-next";
             swiper.navigation.init();
             swiper.navigation.update();
+            mainSwiperRef.current = swiper;
           }}
           loop
           spaceBetween={0}
           slidesPerView={1}
-          thumbs={{swiper: thumbsSwiper}}
+          thumbs={{ swiper: thumbsSwiper }}
           className="product-item__main-swiper"
         >
-          {images.map((src, i) => (
+          {allImages.map((src, i) => (
             <SwiperSlide key={i}>
               <img
                 src={src}
@@ -65,7 +132,8 @@ const ProductItemSwiper: React.FC<ProductItemSwiperProps> = ({productData}) => {
             </SwiperSlide>
           ))}
         </Swiper>
-        {/* Custom SVG navigation arrows */}
+
+        {/* Кнопки навигации */}
         <button
           type="button"
           className="swiper-button-custom swiper-button-prev"
@@ -104,6 +172,7 @@ const ProductItemSwiper: React.FC<ProductItemSwiperProps> = ({productData}) => {
           </svg>
         </button>
       </div>
+
       {/* Thumbnails Swiper */}
       <Swiper
         onSwiper={setThumbsSwiper}
@@ -113,7 +182,7 @@ const ProductItemSwiper: React.FC<ProductItemSwiperProps> = ({productData}) => {
         modules={[Thumbs]}
         className="product-item__thumbs-swiper"
       >
-        {images.map((src, i) => (
+        {allImages.map((src, i) => (
           <SwiperSlide key={i}>
             <img
               src={src}

@@ -3,7 +3,7 @@ import { ProductData } from "../utils/getProductData";
 
 interface WishlistState {
   items: ProductData[];
-  isOpen: boolean
+  isOpen: boolean;
 }
 
 const initialState: WishlistState = {
@@ -16,7 +16,9 @@ export const wishlistSlice = createSlice({
   initialState,
   reducers: {
     addToWishlist: (state, action: PayloadAction<ProductData>) => {
-      const exists = state.items.find((item) => item.index === action.payload.index);
+      const exists = state.items.find(
+        (item) => item.index === action.payload.index
+      );
       if (!exists) {
         state.items.push(action.payload);
       }
@@ -33,6 +35,7 @@ export const wishlistSlice = createSlice({
   },
 });
 
-export const { addToWishlist, removeFromWishlist, closeFilter, toggleFilter } = wishlistSlice.actions;
+export const { addToWishlist, removeFromWishlist, closeFilter, toggleFilter } =
+  wishlistSlice.actions;
 
 export default wishlistSlice.reducer;

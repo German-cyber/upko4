@@ -1,40 +1,40 @@
 import React from "react";
-import {useSelector, useDispatch} from "react-redux";
-import {RootState} from "../../store/store";
-import {removeItem, updateQuantity, closeCart} from "../../store/cartSlice";
-import {QuantityCounter} from "../QuantityCounter";
+import { useSelector, useDispatch } from "react-redux";
+import { RootState } from "../../store/store";
+import { removeItem, updateQuantity, closeCart } from "../../store/cartSlice";
+import { QuantityCounter } from "../QuantityCounter";
 import "./Cart.css";
 import ProgressBar from "./ProgressBar/ProgressBar";
 
 export const Cart: React.FC = () => {
-  const {items, isOpen} = useSelector((state: RootState) => state.cart);
+  const { items, isOpen } = useSelector((state: RootState) => state.cart);
   const dispatch = useDispatch();
 
-  const handleQuantityChange = (id: number, quantity: number) => {
-    dispatch(updateQuantity({id, quantity}));
+  const handleQuantityChange = (id: number, selectedBesidesIndex: number, quantity: number) => {
+    dispatch(updateQuantity({ id, selectedBesidesIndex, quantity }));
   };
 
-  const handleRemoveItem = (id: number) => {
-    dispatch(removeItem(id));
+  const handleRemoveItem = (id: number, selectedBesidesIndex: number) => {
+    dispatch(removeItem({ id, selectedBesidesIndex }));
   };
 
-const calculateSubtotal = () => {
-  const cleanPrice = (price: string) => {
-    return parseFloat(price.replace(/[^0-9.]/g, "")); // Убираем все символы, кроме цифр и точки
-  };
+  const calculateSubtotal = () => {
+    const cleanPrice = (price: string) => {
+      return parseFloat(price.replace(/[^0-9.]/g, ""));
+    };
 
-  return items.reduce((total, item) => {
-    const price = cleanPrice(item.price); // Используем функцию для очистки цены
-    return total + price * item.quantity;
-  }, 0);
-};
+    return items.reduce((total, item) => {
+      const price = cleanPrice(item.price);
+      return total + price * item.quantity;
+    }, 0);
+  };
 
   const subtotal = calculateSubtotal();
-  const shipping = subtotal > 0 ? 0 : 0; // Можно добавить стоимость доставки если нужно
+  const shipping = subtotal > 0 ? 0 : 0;
   const total = subtotal + shipping;
 
   const handleCheckout = () => {
-    window.location.href = `/payment/index.html?siteName=${'Upko'}&totalPrice=${total}`;
+    window.location.href = `/payment/index.html?siteName=Upko&totalPrice=${total}`;
   };
 
   if (!isOpen) return null;
@@ -66,8 +66,7 @@ const calculateSubtotal = () => {
               </>
             )}
           </p>
-
-          <ProgressBar progress={total}/>
+          <ProgressBar progress={total} />
         </div>
 
         <div className="cart__items">
@@ -75,7 +74,10 @@ const calculateSubtotal = () => {
             <div className="cart__empty">Your cart is empty</div>
           ) : (
             items.map((item) => (
-              <div key={item.id} className="cart__item">
+              <div
+                key={`${item.id}-${item.selectedBesidesIndex}`}
+                className="cart__item"
+              >
                 <img
                   src={item.image}
                   alt={item.title}
@@ -88,12 +90,14 @@ const calculateSubtotal = () => {
                     <QuantityCounter
                       initialValue={item.quantity}
                       onChange={(quantity) =>
-                        handleQuantityChange(item.id, quantity)
+                        handleQuantityChange(item.id, item.selectedBesidesIndex, quantity)
                       }
                     />
                     <button
                       className="cart__item-remove"
-                      onClick={() => handleRemoveItem(item.id)}
+                      onClick={() =>
+                        handleRemoveItem(item.id, item.selectedBesidesIndex)
+                      }
                     >
                       Remove
                     </button>

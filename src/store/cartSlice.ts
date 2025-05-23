@@ -1,7 +1,8 @@
-import {createSlice, PayloadAction} from "@reduxjs/toolkit";
+import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
 export interface CartItem {
   id: number;
+  selectedBesidesIndex: number;
   title: string;
   price: string;
   quantity: number;
@@ -24,22 +25,38 @@ export const cartSlice = createSlice({
   reducers: {
     addItem: (state, action: PayloadAction<CartItem>) => {
       const existingItem = state.items.find(
-        (item) => item.id === action.payload.id
+        (item) =>
+          item.id === action.payload.id &&
+          item.selectedBesidesIndex === action.payload.selectedBesidesIndex
       );
+
       if (existingItem) {
         existingItem.quantity += action.payload.quantity;
       } else {
         state.items.push(action.payload);
       }
     },
-    removeItem: (state, action: PayloadAction<number>) => {
-      state.items = state.items.filter((item) => item.id !== action.payload);
+    removeItem: (
+      state,
+      action: PayloadAction<{ id: number; selectedBesidesIndex: number }>
+    ) => {
+      state.items = state.items.filter(
+        (item) =>
+          !(
+            item.id === action.payload.id &&
+            item.selectedBesidesIndex === action.payload.selectedBesidesIndex
+          )
+      );
     },
     updateQuantity: (
       state,
-      action: PayloadAction<{id: number; quantity: number}>
+      action: PayloadAction<{ id: number; selectedBesidesIndex: number; quantity: number }>
     ) => {
-      const item = state.items.find((item) => item.id === action.payload.id);
+      const item = state.items.find(
+        (item) =>
+          item.id === action.payload.id &&
+          item.selectedBesidesIndex === action.payload.selectedBesidesIndex
+      );
       if (item) {
         item.quantity = action.payload.quantity;
       }
@@ -53,7 +70,7 @@ export const cartSlice = createSlice({
   },
 });
 
-export const {addItem, removeItem, updateQuantity, toggleCart, closeCart} =
+export const { addItem, removeItem, updateQuantity, toggleCart, closeCart } =
   cartSlice.actions;
 
 export default cartSlice.reducer;

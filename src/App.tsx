@@ -1,6 +1,6 @@
 import React from "react";
 import { useSelector } from "react-redux";
-import { Routes, Route, HashRouter } from "react-router-dom";
+// import { Routes, Route, HashRouter } from "react-router-dom";
 import { RootState } from "./store/store";
 import { Cart } from "./components/Cart/Cart";
 import DiscountBanner from "./components/DiscountBanner";
@@ -23,6 +23,9 @@ import Faq from "./pages/Faq";
 import Wishlist from "./pages/Wishlist";
 import { Filter } from "./components/Filter/Filter";
 
+
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+
 const App: React.FC = () => {
   const items = useSelector((state: RootState) => state.cart.items);
 
@@ -32,7 +35,7 @@ const App: React.FC = () => {
 }, 0);
 
   return (
-    <HashRouter>
+    <Router>
       <ScrollToTop />
       <div style={{ background: "#fff", minHeight: "100vh" }}>
         <DiscountBanner />
@@ -51,20 +54,13 @@ const App: React.FC = () => {
           <Route path="/faq" element={<Faq />} />
           <Route path="/wishlist" element={<Wishlist />} />
 
-
-
-
-
-
-
-
           <Route path="/product/:slug/:index" element={<ProductItemPage />} />
         </Routes>
         <Footer />
         <Cart />
         <Filter/>
       </div>
-    </HashRouter>
+    </Router>
   );
 };
 
