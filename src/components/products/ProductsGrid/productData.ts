@@ -62,6 +62,44 @@ const productData = [
     price: "$159.00",
     newPrice: "From $20.00",
     slug: "portable-bowknot-spreader-bar-and-restraint-set",
+    besides: [
+      {
+        productName: 'Spreader Bar',
+        price: '$159.00',
+        newPrice: '$119.00',
+        productImgList: ['/product-images-all/7/Productdetail-2.jpg', '/product-images-all/7/Playscenario-1.jpg', '/product-images-all/7/Playscenario-4.jpg', '/product-images-all/7/Playscenario-2.jpg', '/product-images-all/7/Playscenario-6.jpg', '/product-images-all/7/3_0cda164e-aead-45d6-b644-3326c67d1b4e.gif', '/product-images-all/7/4_ba8a37ff-ff7f-418a-98db-5892918958fa.gif', '/product-images-all/7/5_53c74971-68dc-4c83-a2c6-f40a5356ef80.gif', '/product-images-all/7/6.gif', '/product-images-all/7/Productdetail-3.jpg']
+      },
+      {
+        productName: 'Spreader Bar + Small Size Silicone Dildo & Connection Accessories',
+        price: '',
+        newPrice: '$159.00',
+        productImgList: ['/product-images-all/7/Sku-set_dildo.jpg']
+      },
+      {
+        productName: 'Spreader Bar + Large Size Silicone Dildo & Connection Accessories',
+        price: '',
+        newPrice: '$159.00',
+        productImgList: ['/product-images-all/7/Sku-set_dildo.jpg']
+      },
+      {
+        productName: 'Spreader Bar + Remote Control Wand Vibrator & Connection Accessories',
+        price: '',
+        newPrice: '$229.00',
+        productImgList: ['/product-images-all/7/Sku-set_wandvibrator.jpg']
+      },
+      {
+        productName: 'Spreader Bar + Connection Accessories For Dildo',
+        price: '$159.00',
+        newPrice: '$139.00',
+        productImgList: ['/product-images-all/7/Sku-set_wandvibrator.jpg', '/product-images-all/7/Productdetail-3.jpg', '/product-images-all/7/Productdetail-5.jpg', '/product-images-all/7/Sku-dildomountingaccessory.jpg', '/product-images-all/7/Sku-singleset.jpg', '/product-images-all/7/Sku-wandvibratormountingaccessory.jpg', '/product-images-all/7/7_e7409c8a-f764-4900-9e2a-cc4bdf6ca4bd.jpg', '/product-images-all/7/7_e7409c8a-f764-4900-9e2a-cc4bdf6ca4bd.jpg']
+      },
+      {
+        productName: 'Spreader Bar + Connection Accessories For Vibrator',
+        price: '$159.00',
+        newPrice: '$139.00',
+        productImgList: ['/product-images-all/7/Sku-set_wandvibrator.jpg', '/product-images-all/7/Productdetail-3.jpg', '/product-images-all/7/Productdetail-5.jpg', '/product-images-all/7/Sku-dildomountingaccessory.jpg', '/product-images-all/7/Sku-singleset.jpg', '/product-images-all/7/Sku-wandvibratormountingaccessory.jpg', '/product-images-all/7/7_e7409c8a-f764-4900-9e2a-cc4bdf6ca4bd.jpg', '/product-images-all/7/7_e7409c8a-f764-4900-9e2a-cc4bdf6ca4bd.jpg']
+      },
+    ]
   },
   {
     index: 8,
@@ -89,6 +127,29 @@ const productData = [
     price: "$159.00",
     newPrice: "From $129.00",
     slug: "fux-sunset-scenery-wooden-shackles-collection",
+
+    besides: [
+      {
+        productName: 'Hand Shackles',
+        price: '$159.00',
+        newPrice: '$129.00',
+        productImgList: ['/product-images-all/10/6_43d6c8aa-d199-4053-b36b-c8cfaf2bb292.jpg', '/product-images-all/10/4_179058ab-c580-4b62-80e1-8e2719991684.jpg']
+      },
+
+      {
+        productName: 'Neck Shackles + Hand Shackles',
+        price: '',
+        newPrice: '$269.00',
+        productImgList: ['/product-images-all/10/3_299e7960-15dc-48ac-8023-619f3f3b40d6.jpg', '/product-images-all/10/5_9c0f7679-4fa4-463c-bcd4-3fd16349b180.jpg',]
+      },
+
+      {
+        productName: 'Foot Shackles',
+        price: '',
+        newPrice: '$369.00',
+        productImgList: ['/product-images-all/10/2_6c5f6981-62fe-4693-9654-f119748a4877.jpg', '/product-images-all/10/1_322a24d8-63eb-45f7-a409-43ef0973bf85.jpg', '/product-images-all/10/7_751ac319-9b97-4185-86df-98aeae02f2b7.jpg', '/product-images-all/10/8_e0e90198-b328-4fb3-a96e-420180ea927d.jpg', '/product-images-all/10/9_10d3232c-3465-42f2-84b6-4925b69ce8fb.jpg', '/product-images-all/10/10_b84a9867-fed3-4e29-aacf-8c3db2ec3886.jpg', '/product-images-all/10/11_99867f93-bd40-4d00-a722-604a48440999.jpg', '/product-images-all/10/12_f0648172-bcd8-478b-9059-dcf620f1e797.jpg', '/product-images-all/10/13_71109c51-1b92-461d-b731-0df856e9ce5f.jpg']
+      },
+    ]
   },
   {
     index: 11,
@@ -152,6 +213,26 @@ const productData = [
       "Spreader Bar With Wrist And Ankle Cuffs Matching With Various Accessories",
     price: "From $79.00",
     slug: "spreader-bar-with-wrist-and-ankle-cuffs-matching-with-various-accessories",
+    besides: [
+      {
+        productName: 'Spreader bar+clitoral chain dangle with bell',
+        price: '',
+        newPrice: '',
+        productImgList: ['/product-images-all/17/Accessory-clitoralchainclamps.jpg', '/product-images-all/17/Accessory-pleasureball.jpg', '/product-images-all/17/Spreaderbar-blackbackground.jpg', '/product-images-all/17/Style-Spreaderbar_clitoralchaindanglewithbell.jpg', '/product-images-all/17/Style-Spreaderbar_pleasureball.jpg']
+      },
+      {
+        productName: 'Spreader bar+pleasure ball',
+        price: '$159.00',
+        newPrice: '$119.00',
+        productImgList: ['/product-images-all/17/Accessories-1.jpg', '/product-images-all/17/AI-1.jpg', '/product-images-all/17/Illustration-1_547e17c4-b3ac-4759-bed4-73cacb2e4aaa.jpg', '/product-images-all/17/Accessories-2.jpg', '/product-images-all/17/AI-2.jpg']
+      },
+      {
+        productName: 'Spreader bar+clitoral chain dangle with bell+pleasure ball',
+        price: '$159.00',
+        newPrice: '$119.00',
+        productImgList: ['/product-images-all/17/Illustration-2_ea25c5fb-9e47-4303-81b2-3c677e4dbe8f.jpg', '/product-images-all/17/AI-3.jpg', '/product-images-all/17/Illustration-3_ef58efb9-d84d-4190-8e2d-e33291adef4a.jpg', '/product-images-all/17/Package_ff3ec05a-b210-45d4-8172-2c4bb94c2298.jpg', '/product-images-all/17/AI-4.jpg', '/product-images-all/17/AI-5.jpg']
+      },
+    ]
   },
   {
     index: 18,
@@ -179,6 +260,22 @@ const productData = [
     price: "$129.00",
     newPrice: "From $90.00",
     slug: "remote-control-wand-vibrator-thigh-harness-combo",
+
+    besides: [
+      {
+        productName: 'Wand Vibrator & Thigh Harness',
+        price: '$128.00',
+        newPrice: '$99',
+        productImgList: ['/product-images-all/20/Outdoorwear0823.png', '/product-images-all/20/Hands-free0823.png', '/product-images-all/20/Hands-free-0823.png', '/product-images-all/20/controlplay0823.png', '/product-images-all/20/Product-5_8bb60523-28d0-48e2-beb9-d8af8aa07616.jpg', '/product-images-all/20/Product-4_2e93cc8a-4b61-4755-8cd5-082c078dfd24.jpg', '/product-images-all/20/Product-3_2f8be3ed-2cdf-47b2-8d74-1a24020c231d.jpg', '/product-images-all/20/Product-2_15747a45-4169-40fe-a0f9-e43fef0e63ee.jpg', '/product-images-all/20/Product-1_c79426cc-e54f-4a3d-86e0-8cb30146badf.jpg', '/product-images-all/20/Weardemonstration.gif']
+      },
+
+      {
+        productName: 'Wand Vibrator & Thigh Harness',
+        price: '$129.00',
+        newPrice: '$90.00',
+        productImgList: ['/product-images-all/20/Package.jpg']
+      },
+    ]
   },
   {
     index: 21,
@@ -262,6 +359,29 @@ const productData = [
     price: "$132.22",
     newPrice: "From $49.99",
     slug: "upko-leather-cosplay-choker-leash-leash-should-be-purchased-separately",
+
+    besides: [
+      {
+        productName: 'Choker-regular size',
+        price: '$132.22',
+        newPrice: '$69.99',
+        productImgList: ['/product-images-all/29/WechatIMG326.jpg', '/product-images-all/29/WechatIMG327.jpg', '/product-images-all/29/upko05761.jpg']
+      },
+
+      {
+        productName: 'Choker-large size',
+        price: '$132.22',
+        newPrice: '$89.99',
+        productImgList: ['/product-images-all/29/WechatIMG326.jpg', '/product-images-all/29/WechatIMG327.jpg']
+      },
+
+      {
+        productName: 'Leash',
+        price: '$132.22',
+        newPrice: '$149.99',
+        productImgList: ['/product-images-all/29/WechatIMG328.jpg', '/product-images-all/29/6_e26aba40-a92a-4402-8faa-6b455004bfd0.jpg', '/product-images-all/29/03_800x800_b411b5c5-b1c8-4a0a-9bac-93fc585d2216.jpg', '/product-images-all/29/03.jpg', '/product-images-all/29/02_800x800_3abc3746-61c7-4dc2-aef3-c32bc2a542de.jpg', '/product-images-all/29/02.jpg', '/product-images-all/29/01_800x800_b73caf95-5c35-4158-a89c-2d34c52fc08c.jpg', '/product-images-all/29/01.jpg']
+      },
+    ]
   },
   {
     index: 30,
@@ -271,6 +391,22 @@ const productData = [
     price: "$88.88",
     newPrice: "From $79.99",
     slug: "upko-leather-handcuffs-ankle-cuffs",
+
+    besides: [
+      {
+        productName: 'Handcuffs',
+        price: '$88.88',
+        newPrice: '$79.99',
+        productImgList: ['/product-images-all/30/1187.jpg', '/product-images-all/30/201-12-1_00929.jpg', '/product-images-all/30/201-12-1_00928.jpg', '/product-images-all/30/f9bec11a867e67d39b125ffbe1792e2c.jpg','/product-images-all/30/4.jpg', '/product-images-all/30/2_89751992-eec0-4cdf-89bb-4705b14ca245.jpg','/product-images-all/30/1_582facd5-2450-41ab-9d2a-f6bf6638cf95.jpg']
+      },
+
+      {
+        productName: 'Ankle cuffs',
+        price: '$94.43',
+        newPrice: '$84.99',
+        productImgList: ['/product-images-all/30/1208.jpg', '/product-images-all/30/201-12-1_00926.jpg', '/product-images-all/30/201-12-1_00924.jpg', '/product-images-all/30/Newpackinglayout.jpg','/product-images-all/30/NewPacking.jpg']
+      },
+    ]
   },
   {
     index: 31,
@@ -279,6 +415,24 @@ const productData = [
     title: "UPKO Leather Kinky Tools Set",
     price: "$549.99",
     slug: "upko-leather-kinky-tools-set",
+
+    besides: [
+      {
+        productName: 'Black',
+        price: '$611.10',
+        newPrice: '$549.99',
+        productImgList: ['/product-images-all/31/WechatIMG262.jpg', '/product-images-all/31/Insideofthelidwordingchanged.jpg', '/product-images-all/31/Logo.jpg', '/product-images-all/31/Blackset_6df76bab-209e-49a0-8350-816e3b1b1f9a.jpg', '/product-images-all/31/Blackset_6df76bab-209e-49a0-8350-816e3b1b1f9a.jpg', '/product-images-all/31/Masterpic_934a8496-a466-4c42-b6da-9527d08bcf06.jpg']
+
+      },
+
+      {
+        productName: 'Red',
+        price: '$611.10',
+        newPrice: '$549.99',
+        productImgList: ['/product-images-all/31/WechatIMG260.jpg', '/product-images-all/31/Redset.jpg', '/product-images-all/31/WechatIMG259.jpg', '/product-images-all/31/WechatIMG261.jpg']
+
+      },
+    ]
   },
   {
     index: 32,
@@ -377,6 +531,24 @@ const productData = [
     price: "$143.33",
     newPrice: "From $129.99",
     slug: "upko-leather-bondage-belt",
+
+    besides: [
+      {
+        productName: 'Regular Size',
+        price: '$143.33',
+        newPrice: '$143.33',
+        productImgList: ['/product-images-all/42/1_8804c58f-0733-4615-80c1-4b5d1060da3c.webp', '/product-images-all/42/UPKOLeatherbondagebelt-1_1.jpg', '/product-images-all/42/UPKOLeatherbondagebelt-2.jpg', '/product-images-all/42/3_1be2866f-8e0d-4a41-9f1d-c80fe4f4580f.jpg', '/product-images-all/42/4_94b2a179-9382-4511-9f4e-54436d32b75b.jpg', '/product-images-all/42/5_5fe0a3df-5b3c-4ed6-aafe-2271a9678505.jpg']
+
+      },
+
+      {
+        productName: 'Large Size',
+        price: '$143.33',
+        newPrice: '$139.00',
+        productImgList: ['/product-images-all/42/1_8804c58f-0733-4615-80c1-4b5d1060da3c.webp', '/product-images-all/42/Masterpic_d7db1779-3a4d-461f-b90a-86760fb68052.webp']
+
+      },
+    ]
   },
   {
     index: 43,
@@ -439,6 +611,37 @@ const productData = [
     price: "$38.88",
     newPrice: "$34.99",
     slug: "upko-standard-static-bondage-tape",
+
+        besides: [
+      {
+        productName: 'Black',
+        price: '$38.88',
+        newPrice: '$34.99',
+        productImgList: ['/product-images-all/49/5_9eb8b9e8-3183-4687-8a68-48e73270b917.jpg', '/product-images-all/49/scenarioreference4.jpg', '/product-images-all/49/scenarioreference5.jpg', '/product-images-all/49/3_30765919-e934-4f41-be07-449cf9ab2038.jpg', '/product-images-all/49/3_30765919-e934-4f41-be07-449cf9ab2038.jpg']
+
+      },
+
+      {
+        productName: 'Transparent',
+        price: '$38.88',
+        newPrice: '$34.99',
+        productImgList: ['/product-images-all/49/6_db94948e-c3ce-4178-a30a-37c1515366f7.jpg', '/product-images-all/49/12.jpg', '/product-images-all/49/36911c0904db1d481a24384dac5a57ea.jpg']
+      },
+      {
+        productName: 'Red',
+        price: '$38.88',
+        newPrice: '$34.99',
+        productImgList: ['/product-images-all/49/1_382a1677-2071-4145-ab15-4d9cdd5e9a28.jpg', '/product-images-all/49/scenarioreference1.jpg']
+
+      },
+      {
+        productName: 'Silver',
+        price: '$38.88',
+        newPrice: '$34.99',
+        productImgList: ['/product-images-all/49/3_30765919-e934-4f41-be07-449cf9ab2038.jpg', '/product-images-all/49/1_55fec38c-6dc0-4e58-9030-8fb6839dbaca.jpg']
+
+      },
+    ]
   },
   {
     index: 50,
@@ -448,6 +651,28 @@ const productData = [
     price: "$38.88",
     newPrice: "$34.99",
     slug: "upko-restraints-bondage-rope-including-instructional-videos",
+
+    besides: [
+      {
+        productName: 'Gold',
+        price: '$38.88',
+        newPrice: '$34.99',
+        productImgList: ['/product-images-all/50/1_108dee62-3477-46d7-bcae-4b194278e93f.jpg', '/product-images-all/50/2I3A5258copy.jpg', '/product-images-all/50/2I3A5272copy.jpg', '/product-images-all/50/packaging_bef59b8e-05e3-4bd3-bc20-e467d2f192f7.jpg']
+      },
+      {
+        productName: 'Black',
+        price: '$38.88',
+        newPrice: '$34.99',
+        productImgList: ['/product-images-all/50/2_4913fad9-b343-441c-9492-3f17eb1a406f.jpg']
+      },
+      {
+        productName: 'Red',
+        price: '$38.88',
+        newPrice: '$34.99',
+        productImgList: ['/product-images-all/50/5_63fc93e2-f95d-4b5d-80da-5b99df99fb33.jpg', '/product-images-all/50/2I3A4749copy.jpg', '/product-images-all/50/6_1b7d7567-cb64-41a5-8e1b-e6b4d5d1a6b5.jpg']
+        
+      },
+    ]
   },
   {
     index: 51,
@@ -493,6 +718,21 @@ const productData = [
     price: "$102.21",
     newPrice: "From $91.99",
     slug: "your-name-collection-choker-letters-should-be-purchased-separately",
+
+        besides: [
+      {
+        productName: 'Regular Size',
+        price: '$102.21',
+        newPrice: '$91.99',
+        productImgList: ['/product-images-all/55/1371.jpg', '/product-images-all/55/7_4f48a133-950e-403e-bed3-25185bc71ab1.jpg', '/product-images-all/55/6_6eb3de02-4533-4127-854e-961364cfd8de.jpg', '/product-images-all/55/3_4688b3a8-9af8-45cc-be42-8b085bfae562.jpg','/product-images-all/55/SKU2.jpg','/product-images-all/55/2_9b7ef8d1-7ab6-4572-b184-79726ba819d8.jpg','/product-images-all/55/1_83b39d33-d257-46d6-b9de-027214fc4129.jpg']
+      },
+      {
+        productName: 'Large Size',
+        price: '$123.32',
+        newPrice: '$110.99',
+        productImgList: ['/product-images-all/55/1371.jpg', '/product-images-all/55/7_4f48a133-950e-403e-bed3-25185bc71ab1.jpg', '/product-images-all/55/6_6eb3de02-4533-4127-854e-961364cfd8de.jpg', '/product-images-all/55/3_4688b3a8-9af8-45cc-be42-8b085bfae562.jpg','/product-images-all/55/SKU2.jpg','/product-images-all/55/2_9b7ef8d1-7ab6-4572-b184-79726ba819d8.jpg','/product-images-all/55/1_83b39d33-d257-46d6-b9de-027214fc4129.jpg']
+      },
+    ]
   },
   {
     index: 56,
@@ -521,6 +761,21 @@ const productData = [
     price: "$69.99",
     newPrice: "$49.99",
     slug: "desire-for-mouth-bondage-collection-middle-heart-shaped-breathable-mouth-gag",
+
+    besides: [
+      {
+        productName: 'Red',
+        price: '$69.99',
+        newPrice: '$49.99',
+        productImgList: ['/product-images-all/58/Productphoto-1-red_bf873379-e3ef-42ec-8905-6c9ac1f0739d.jpg','/product-images-all/58/Productphoto-2-red_a2abb8a7-5970-40d1-b677-2b6906e2ecc1.jpg', '/product-images-all/58/Package_17cd33c6-30d0-4725-a12a-01a54b035f0b.jpg','/product-images-all/58/WechatIMG248.jpg']
+      },
+      {
+        productName: 'Black',
+        price: '$69.99',
+        newPrice: '$49.99',
+        productImgList: ['/product-images-all/58/Sku-black_ed1f3fb9-ae41-4eb5-9136-3732ad474f0f.jpg', '/product-images-all/58/WechatIMG248.jpg']
+      },
+    ]
   },
   {
     index: 59,
@@ -529,6 +784,22 @@ const productData = [
     title: "Desire for Mouth Bondage Collection-Dildo-shaped Mouth Gag",
     price: "$49.99",
     slug: "desire-for-mouth-bondage-collection-dildo-shaped-mouth-gag",
+
+    besides: [
+      {
+        productName: 'Red',
+        price: '$69.99',
+        newPrice: '$49.99',
+        productImgList: ['/product-images-all/59/Sku-red_b0f30d43-1898-49cc-9acd-3022a6d016d5.jpg', '/product-images-all/59/Productphoto-1-red_1a406f5a-daa2-4097-95e0-56cb30c2dc91.jpg', '/product-images-all/59/Productphoto-2-red_17001a0f-6b10-4337-bf4c-af07ed49e19f.jpg']
+
+      },
+      {
+        productName: 'Black',
+        price: '$69.99',
+        newPrice: '$49.99',
+        productImgList: ['/product-images-all/59/Sku-black_5dab140f-aa42-4bf3-a0cb-4c53da89c517.jpg', '/product-images-all/59/WechatIMG250.jpg']
+      },
+    ]
   },
   {
     index: 60,
@@ -538,6 +809,22 @@ const productData = [
     price: "$69.99",
     newPrice: "$49.99",
     slug: "desire-for-mouth-bondage-collection-knot-shaped-mouth-gag",
+
+    besides: [
+      {
+        productName: 'Red',
+        price: '$69.99',
+        newPrice: '$49.99',
+        productImgList: ['/product-images-all/60/Productphoto-1-red.jpg', '/product-images-all/60/Productphoto-2-red.jpg', '/product-images-all/60/Sku-red_740b4b6b-be1f-4c85-8067-8e76fd2b7869.jpg', '/product-images-all/60/Package_9f21e3ba-c63a-4aa8-b5c6-9dd0c2fdbfe3.jpg', '/product-images-all/60/Collectivephoto-2.jpg']
+
+      },
+      {
+        productName: 'Black',
+        price: '$69.99',
+        newPrice: '$49.99',
+        productImgList: ['/product-images-all/60/Productphoto-1-black.jpg', '/product-images-all/60/Collectivephoto-1.jpg', '/product-images-all/60/Productphoto-2-black.jpg', '/product-images-all/60/Sku-black_b641285d-c023-4dd0-8fff-11580af6f861.jpg']
+      },
+    ]
   },
   {
     index: 61,
@@ -601,6 +888,22 @@ const productData = [
     price: "$54.44",
     newPrice: "From $49.00",
     slug: "moist-eyes-pearl-collar-leash-leash-should-be-purchased-separately",
+
+    besides: [
+      {
+        productName: 'Collar',
+        price: '$87.78',
+        newPrice: '$79.00',
+        productImgList: ['/product-images-all/67/7_24b01e13-2ada-4580-a577-e8f5fdbac54a.jpg', '/product-images-all/67/10_bdd83ae5-a568-4346-a914-0d38c41dec65.jpg', '/product-images-all/67/2_196a474c-7ffa-4f31-9e11-17211d3d4b63.jpg', '/product-images-all/67/5_47c7b748-dc3a-4cff-a6bc-5e23f1622506.jpg', '/product-images-all/67/Packaging_4a413772-1afa-4b8e-a133-c7f1f3d21b9d.jpg']
+
+      },
+      {
+        productName: 'Leash',
+        price: '$54.44',
+        newPrice: '$49.00',
+        productImgList: ['/product-images-all/67/11_842430a7-91ae-4d39-b454-91503587c060.jpg', '/product-images-all/67/8_468b7755-2508-4a71-b824-f1b4391da781.jpg', '/product-images-all/67/8_468b7755-2508-4a71-b824-f1b4391da781.jpg', '/product-images-all/67/1_52aa5f2a-3747-4442-a62f-7ae73cbd1949.jpg']
+      },
+    ]
   },
   {
     index: 68,
@@ -610,6 +913,22 @@ const productData = [
     price: "$98.89",
     newPrice: "From $89.00",
     slug: "moist-eyes-pearl-bracelet-anklet",
+
+    besides: [
+      {
+        productName: 'Bracelet',
+        price: '$98.89',
+        newPrice: '$89.00',
+        productImgList: []
+
+      },
+      {
+        productName: 'Anklet',
+        price: '',
+        newPrice: '$109.00',
+        productImgList: []
+      },
+    ]
   },
   {
     index: 69,
@@ -691,6 +1010,28 @@ const productData = [
     title: "UPKO Strap-on Harness Kit(Dildo should be purchased separately)",
     price: "From $21.99",
     slug: "upko-strap-on-harness-kit-dildo-should-be-purchased-separately",
+
+    besides: [
+      {
+        productName: 'Silicone dildo-large size',
+        price: '',
+        newPrice: '$25.99',
+        productImgList: ['/product-images-all/78/Siliconedildo-largesize.jpg']
+      },
+      {
+        productName: 'Harness kit',
+        price: '',
+        newPrice: '$79.99',
+        productImgList: ['/product-images-all/78/Strap-onHarnessKit-masterphotowithdildo.jpg', '/product-images-all/78/Strap-onHarnessKit-detail-1.jpg', '/product-images-all/78/Strap-onHarnessKit-detail-2.jpg', '/product-images-all/78/Strap-onHarnessKit-detail-4.jpg', '/product-images-all/78/13.jpg']
+      },
+      {
+        productName: 'Silicone dildo-small size',
+        price: '',
+        newPrice: '$21.99',
+        productImgList: ['/product-images-all/78/Siliconedildo-smallsize.jpg', '/product-images-all/78/Collectionphotoofthreesizes-1.jpg']
+      },
+
+    ]
   },
   {
     index: 79,
@@ -731,8 +1072,41 @@ const productData = [
     img: "/product-images/83_giftcard.png",
     imgHover: "/product-images-hover/83_giftcard.png",
     title: "UPKO Gift Card",
-    price: "From $200.00",
+    newPrice: "$200.00",
     slug: "upko-gift-card",
+
+    besides: [
+      {
+        productName: '$ 200',
+        price: '',
+        newPrice: '$200',
+        productImgList: []
+      },
+      {
+        productName: '$ 500',
+        price: '',
+        newPrice: '$500',
+        productImgList: []
+      },
+      {
+        productName: '$ 1000',
+        price: '',
+        newPrice: '$1000',
+        productImgList: []
+      },
+      {
+        productName: '$ 1500',
+        price: '',
+        newPrice: '$1500',
+        productImgList: []
+      },
+      {
+        productName: '$ 2000',
+        price: '',
+        newPrice: '$2000',
+        productImgList: []
+      },
+    ]
   },
   {
     index: 84,
@@ -747,8 +1121,35 @@ const productData = [
     img: "/product-images/85_1_5ad56149-52db-4d51-a225-b9686e31e033.jpg",
     imgHover: "/product-images-hover/85_12_9014f9ae-5d97-4247-af43-a2ef58985d1a.jpg",
     title: "UPKO Ultra-thin Tearable Tights",
-    price: "$34.99",
+    price: "$54.99",
     slug: "upko-ultra-thin-tearable-tights",
+
+    besides: [
+      {
+        productName: 'Black',
+        price: '',
+        newPrice: '$34.99',
+        productImgList: ['/product-images-all/85/WechatIMG412.jpg', '/product-images-all/85/13_7ed1da63-d4ce-47e9-8131-c16411e4f170.jpg', '/product-images-all/85/11_19b764b7-c09d-4791-a8b2-0b07d58b8942.jpg', '/product-images-all/85/10_0ddfc01a-1450-4504-ba1d-c0a440953dee.jpg', '/product-images-all/85/8_344f42ad-77c3-481d-800a-e8d45b3636fc.jpg', '/product-images-all/85/3_eab5301b-c77e-42e2-b2bd-64761c4fe852.jpg']
+      },
+      {
+        productName: 'Soft Black',
+        price: '',
+        newPrice: '$34.99',
+        productImgList: ['/product-images-all/85/WechatIMG414.jpg', '/product-images-all/85/2_20b56594-7958-47f2-a8b2-49c99de6d109.jpg']
+      },
+      {
+        productName: 'Grayish Blue',
+        price: '',
+        newPrice: '$34.99',
+        productImgList: ['/product-images-all/85/WechatIMG413.jpg']
+      },
+      {
+        productName: 'Icy Nude',
+        price: '',
+        newPrice: '$34.99',
+        productImgList: ['/product-images-all/85/WechatIMG415.jpg', '/product-images-all/85/15.jpg']
+      }
+    ]
   },
   {
     index: 86,
@@ -758,13 +1159,40 @@ const productData = [
     price: "$29.00",
     newPrice: "$19.00",
     slug: "upko-ultra-thin-tearable-stocking",
+
+    besides: [
+      {
+        productName: 'Black',
+        price: '$29.00',
+        newPrice: '$19.00',
+        productImgList: ['/product-images-all/86/4_2b314e9f-a3fc-4a42-ae85-6cc8b5e22bcf.jpg', '/product-images-all/86/5_9abf2db2-e14b-4d11-95f5-3dba15c49da7.jpg', '/product-images-all/86/6_45729456-f24d-40e7-af61-a9c55d50ad0e.jpg', '/product-images-all/86/13_30b06e6e-883d-43d3-81f1-d21ee680b87c.jpg', '/product-images-all/86/19.jpg']
+      },
+      {
+        productName: 'Black + Red',
+        price: '$29.00',
+        newPrice: '$19.00',
+        productImgList: ['/product-images-all/86/17.jpg', '/product-images-all/86/7_e6522038-b045-4c6a-ac2c-71c958dbc6b0.jpg', '/product-images-all/86/8_d7f8663a-836a-41c0-989b-d2783f03dcd0.jpg']
+      },
+      {
+        productName: 'Gray',
+        price: '$29.00',
+        newPrice: '$19.00',
+        productImgList: ['/product-images-all/86/18.jpg', '/product-images-all/86/12_f2524ed9-84cf-4e28-9d6c-8669502c3cbf.jpg']
+      },
+      {
+        productName: 'White',
+        price: '$29.00',
+        newPrice: '$19.00',
+        productImgList: ['/product-images-all/86/15_7d3e9b57-2877-4b97-bc27-e6b298d1af66.jpg', '/product-images-all/86/10_10ee67bd-136c-4655-bfe2-3e974d81ccb5.jpg']
+      }
+    ]
   },
   {
     index: 87,
     img: "/product-images/87_2_8a88c992-c393-4940-b45e-581a0edc9ef0.png",
     imgHover: "/product-images-hover/87_mnggiflab-compressed.gif",
     title: "UEROS Nexus Power Sex Machine",
-    price: "From $289.00",
+    price: "",
     slug: "ueros-nexus-power-sex-machine",
   },
 ];

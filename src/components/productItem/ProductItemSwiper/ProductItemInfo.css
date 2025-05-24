@@ -20,7 +20,8 @@
 .product-item__price-row {
     display: flex;
     align-items: center;
-    gap: 16px;
+    margin: 16px;
+    margin-left: 0px;
 }
 
 .product-item__price {
@@ -93,12 +94,14 @@
     font-size: 1rem;
     color: #222;
     margin: 20px 0px;
+    text-align: left;
 }
 
 .product-item__discount-info {
     font-size: 1rem;
     color: #888;
     margin-bottom: 20px;
+    text-align: left;
 }
 
 .product-item__delivery {
@@ -106,6 +109,7 @@
     color: #444;
     margin-top: 8px;
     margin-bottom: 20px;
+    text-align: left;
 }
 
 @media (max-width: 1200px) {
@@ -160,4 +164,30 @@
 .add-to-wishlist-button-from-product-info.added path{
   stroke: #ec0101;
   fill: #ec0101;
+}
+
+/* besides */
+.besides_list{
+  text-align: left;
+}
+
+.besides_item{
+  text-align: left !important;
+  border: 1px solid #aaa;
+  color: #aaa;
+  padding: 3px;
+  border-radius: 100px;
+  font-size: 14px;
+  display: inline-block;
+  margin: 5px 0px;
+  transition: all .1s ease;
+  cursor: pointer;
+  margin-right: 5px;
+  padding: 3px 5px;
+}
+
+.besides_item.active{
+  color: #fff;
+  background: #222;
+  border: 1px solid #222;
 }

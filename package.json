@@ -8,8 +8,7 @@
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "generate-images-config": "node scripts/generateProductImagesConfig.js",
-    "deploy": "gh-pages -d dist"
+    "generate-images-config": "node scripts/generateProductImagesConfig.js"
   },
   "dependencies": {
     "@reduxjs/toolkit": "^2.8.2",
