@@ -6,6 +6,16 @@ import {QuantityCounter} from "../QuantityCounter";
 import "./Cart.css";
 import ProgressBar from "./ProgressBar/ProgressBar";
 
+// Add type declaration for window config
+declare global {
+  interface Window {
+    __PAYMENT_CONFIG__: {
+      paymentUrl: string;
+      siteName: string;
+    };
+  }
+}
+
 export const Cart: React.FC = () => {
   const {items, isOpen} = useSelector((state: RootState) => state.cart);
   const dispatch = useDispatch();
@@ -18,23 +28,24 @@ export const Cart: React.FC = () => {
     dispatch(removeItem(id));
   };
 
-const calculateSubtotal = () => {
-  const cleanPrice = (price: string) => {
-    return parseFloat(price.replace(/[^0-9.]/g, "")); // Убираем все символы, кроме цифр и точки
-  };
+  const calculateSubtotal = () => {
+    const cleanPrice = (price: string) => {
+      return parseFloat(price.replace(/[^0-9.]/g, "")); // Убираем все символы, кроме цифр и точки
+    };
 
-  return items.reduce((total, item) => {
-    const price = cleanPrice(item.price); // Используем функцию для очистки цены
-    return total + price * item.quantity;
-  }, 0);
-};
+    return items.reduce((total, item) => {
+      const price = cleanPrice(item.price); // Используем функцию для очистки цены
+      return total + price * item.quantity;
+    }, 0);
+  };
 
   const subtotal = calculateSubtotal();
   const shipping = subtotal > 0 ? 0 : 0; // Можно добавить стоимость доставки если нужно
   const total = subtotal + shipping;
 
   const handleCheckout = () => {
-    window.location.href = `/payment/index.html?siteName=${'Upko'}&totalPrice=${total}`;
+    const {paymentUrl, siteName} = window.__PAYMENT_CONFIG__;
+    window.location.href = `${paymentUrl}?siteName=${siteName}&totalPrice=${total}`;
   };
 
   if (!isOpen) return null;
@@ -54,20 +65,26 @@ const calculateSubtotal = () => {
           <p className="header-delivery-text">
             {total > 0 && total < 99 ? (
               <>
-                Almost there, add <span className="true-price">${(100 - total - 1).toFixed(2)}</span> more to get FREE SHIPPING!
+                Almost there, add{" "}
+                <span className="true-price">
+                  ${(100 - total - 1).toFixed(2)}
+                </span>{" "}
+                more to get FREE SHIPPING!
               </>
             ) : total >= 99 ? (
               <>
-                <span className="good-price">Congratulations!</span> You've got free shipping!
+                <span className="good-price">Congratulations!</span> You've got
+                free shipping!
               </>
             ) : (
               <>
-                Free Shipping for all orders over <span className="false-price">$99.00</span>
+                Free Shipping for all orders over{" "}
+                <span className="false-price">$99.00</span>
               </>
             )}
           </p>
 
-          <ProgressBar progress={total}/>
+          <ProgressBar progress={total} />
         </div>
 
         <div className="cart__items">
