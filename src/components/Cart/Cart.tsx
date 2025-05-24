@@ -1,8 +1,8 @@
 import React from "react";
-import { useSelector, useDispatch } from "react-redux";
-import { RootState } from "../../store/store";
-import { removeItem, updateQuantity, closeCart } from "../../store/cartSlice";
-import { QuantityCounter } from "../QuantityCounter";
+import {useSelector, useDispatch} from "react-redux";
+import {RootState} from "../../store/store";
+import {removeItem, updateQuantity, closeCart} from "../../store/cartSlice";
+import {QuantityCounter} from "../QuantityCounter";
 import "./Cart.css";
 import ProgressBar from "./ProgressBar/ProgressBar";
 
@@ -17,32 +17,28 @@ declare global {
 }
 
 export const Cart: React.FC = () => {
-  const { items, isOpen } = useSelector((state: RootState) => state.cart);
+  const {items, isOpen} = useSelector((state: RootState) => state.cart);
   const dispatch = useDispatch();
 
-  const handleQuantityChange = (id: number, selectedBesidesIndex: number, quantity: number) => {
-    dispatch(updateQuantity({ id, selectedBesidesIndex, quantity }));
+  const handleQuantityChange = (
+    id: number,
+    selectedBesidesIndex: number,
+    quantity: number
+  ) => {
+    dispatch(updateQuantity({id, selectedBesidesIndex, quantity}));
   };
 
   const handleRemoveItem = (id: number, selectedBesidesIndex: number) => {
-    dispatch(removeItem({ id, selectedBesidesIndex }));
+    dispatch(removeItem({id, selectedBesidesIndex}));
   };
 
   const calculateSubtotal = () => {
     const cleanPrice = (price: string) => {
-<<<<<<< HEAD
-      return parseFloat(price.replace(/[^0-9.]/g, "")); // Убираем все символы, кроме цифр и точки
-    };
-
-    return items.reduce((total, item) => {
-      const price = cleanPrice(item.price); // Используем функцию для очистки цены
-=======
       return parseFloat(price.replace(/[^0-9.]/g, ""));
     };
 
     return items.reduce((total, item) => {
       const price = cleanPrice(item.price);
->>>>>>> ac287fe58dd980b8edee5fbf63875c04c9252623
       return total + price * item.quantity;
     }, 0);
   };
@@ -52,12 +48,8 @@ export const Cart: React.FC = () => {
   const total = subtotal + shipping;
 
   const handleCheckout = () => {
-<<<<<<< HEAD
     const {paymentUrl, siteName} = window.__PAYMENT_CONFIG__;
     window.location.href = `${paymentUrl}?siteName=${siteName}&totalPrice=${total}`;
-=======
-    window.location.href = `/payment/index.html?siteName=Upko&totalPrice=${total}`;
->>>>>>> ac287fe58dd980b8edee5fbf63875c04c9252623
   };
 
   if (!isOpen) return null;
@@ -95,10 +87,6 @@ export const Cart: React.FC = () => {
               </>
             )}
           </p>
-<<<<<<< HEAD
-
-=======
->>>>>>> ac287fe58dd980b8edee5fbf63875c04c9252623
           <ProgressBar progress={total} />
         </div>
 
@@ -123,7 +111,11 @@ export const Cart: React.FC = () => {
                     <QuantityCounter
                       initialValue={item.quantity}
                       onChange={(quantity) =>
-                        handleQuantityChange(item.id, item.selectedBesidesIndex, quantity)
+                        handleQuantityChange(
+                          item.id,
+                          item.selectedBesidesIndex,
+                          quantity
+                        )
                       }
                     />
                     <button
