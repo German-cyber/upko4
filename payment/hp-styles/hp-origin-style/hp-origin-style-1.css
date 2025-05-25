@@ -5723,7 +5723,7 @@ html {
     visibility: hidden;
     width: 100%;
 }
-:roots {
+:root {
     --transitionTimingFunctionEase: cubic-bezier(0.3, 0.3, 0.3, 1);
     --transitionTimingFunctionCubic: cubic-bezier(0.19, 1, 0.22, 1);
     --transitionHeightTimingFunction: var(--transitionTimingFunctionEase);
@@ -7273,7 +7273,7 @@ html {
 .RoZVmiNN__CheckoutItemsOrderSummaryColumn-container.PmnDDzFE__is-singleCol {
     padding-top: var(--space-5);
 }
-:roots {
+:root {
     --checkout-error-message-width: 300px;
 }
 @media only screen and (max-width: 767.98px) {
@@ -7321,7 +7321,7 @@ html {
 .FullPageMessage-Icon {
     margin-bottom: var(--space-4);
 }
-:roots {
+:root {
     --checkout-business-icon-shadow: 0 2px 5px 0 rgba(50, 50, 93, 0.1), 0 1px 1px 0 rgba(0, 0, 0, 0.07);
     --checkout-logo-size: 28px;
     --checkout-logo-size-setup: 35px;
@@ -7650,7 +7650,7 @@ summary {
 template {
     display: none;
 }
-:roots {
+:root {
     --checkout-alpha25: 0.05;
     --checkout-alpha50: 0.1;
     --checkout-alpha100: 0.2;
@@ -8967,7 +8967,7 @@ input {
     -ms-transform: translate(0.75em);
     transform: translate(0.75em);
 }
-:roots {
+:root {
     --green-shimmer-gradient: linear-gradient( 90deg, rgba(255, 255, 255, 0) 35%, var(--checkout-green) 50%, rgba(255, 255, 255, 0) 65%);
     --green-shimmer-border-width: 1px;
 }
@@ -10571,7 +10571,7 @@ body.has-scroll-shim:after {
 .hp-ajdsfg-Container.is-squareBordered .Optional {
     border-radius: 0;
 }
-:roots {
+:root {
     --flag-icon-size: 16px;
     --z-index-chevron: calc(var(--checkout-z-index-field-icon) + 1);
     --z-index-flagIcon: var(--checkout-z-index-field-icon);
@@ -10701,7 +10701,7 @@ body.has-scroll-shim:after {
     font-weight: var(--checkout-text-font-weight);
     padding: var(--space-0) var(--space-1);
 }
-:roots {
+:root {
     --checkout-select-icon-size: 12px;
 }
 .Select {
@@ -10837,7 +10837,7 @@ body.has-scroll-shim:after {
         height: var(--checkout-lg-input-height);
     }
 }
-:roots {
+:root {
     --tax-id-type-select-flag-size: 16px;
     --tax-id-type-select-chevron-size: 12px;
     --checkout-spinner-size: 18px;
@@ -12420,7 +12420,7 @@ body.has-scroll-shim:after {
     gap: var(--space-2);
     vertical-align: middle;
 }
-:roots {
+:root {
     --modal-transition-duration: 0.4s;
     --modal-overlay-transition-duration: 0.25s;
 }
@@ -13267,7 +13267,7 @@ body.has-scroll-shim:after {
 .MobileErrorSummary-errorMessageHeading {
     margin-top: -3px;
 }
-:roots {
+:root {
     --button-success-background-color: #24b47e;
     --success-checkmark-check-duration: 0.3s;
     --shimmer-width: 150%;
@@ -13611,7 +13611,7 @@ body.has-scroll-shim:after {
 .GooglePayButton--light:active {
     background-color: white;
 }
-:roots {
+:root {
     --colorButtonBackground: #00d66f;
     --colorButtonBackgroundHover: #5eee97;
     --colorButtonBackgroundActiveAndFocus: #00c767;
@@ -13797,7 +13797,7 @@ body.has-scroll-shim:after {
     padding-top: var(--space-3);
     text-align: center;
 }
-:roots {
+:root {
     --checkout-checkbox-height: 16px;
     --checkout-checkbox-offset: 4px;
 }
@@ -14243,7 +14243,7 @@ body.has-scroll-shim:after {
 .LinkText-fontWeight--700 {
     font-weight: 700;
 }
-:roots {
+:root {
     --border-box-shadow: 0 0 0 1px #e0e0e0, 0 2px 4px 0 rgba(0, 0, 0, 0.07), 0 1px 1.5px 0 rgba(0, 0, 0, 0.05);
     --checkout-blue: #0074d4;
     --checkout-font-size-10: 10px;
@@ -15174,7 +15174,7 @@ body.has-scroll-shim:after {
 .NQGswNfL__OtpInputSkeleton-input {
     width: 40px;
 }
-:roots {
+:root {
     --spinner-size: var(--link-verification-status-icon-size);
     --text-line-height: var(--link-verification-status-icon-size);
 }
@@ -15461,7 +15461,7 @@ body.has-scroll-shim:after {
         opacity: 1;
     }
 }
-:roots {
+:root {
     --link-backup-pm-linear-gradient-stop: var(--link-icon-brand);
 }
 .BackupPaymentMethodInfoContent-cancelIcon {
@@ -15671,7 +15671,7 @@ body.has-scroll-shim:after {
 .Picker {
     margin: var(--space-1) 0 0 0;
 }
-:roots {
+:root {
     --link-picker-item-padding: 10px var(--space-4);
     --link-picker-item-container-min-height: 44px;
 }
@@ -15963,7 +15963,7 @@ body.has-scroll-shim:after {
 .LinkUpdateCardForm-number--hasCBCSelect {
     padding-left: var(--space-2);
 }
-:roots {
+:root {
     --copy-link-color: var(--checkout-gray400);
     --copy-link-hover-color: var(--checkout-gray600);
     --copy-link-active-color: var(--checkout-gray900);
@@ -16230,7 +16230,7 @@ span .Clipboard {
         height: auto;
     }
 }
-:roots {
+:root {
     --icon-color: #00d66f;
     --icon-text-color: var(--link-text-default);
     --link-text-default: #1d3944;
@@ -17123,7 +17123,7 @@ span .Clipboard {
     color: var(--checkout-gray400);
     z-index: var(--checkout-z-index-field-icon);
 }
-:roots {
+:root {
     --transition-duration: 0.25s;
     --modal-width: 400px;
     --modal-height: 600px;
@@ -18620,7 +18620,7 @@ span .Clipboard {
 .LinkPhoneNumberAccordionItem .FormFieldGroup-child {
     margin-top: var(--space-1);
 }
-:roots {
+:root {
     --colorPrimary100: #5eee97;
     --colorPrimary500: #008545;
     --colorPrimary600: #006635;
@@ -19084,7 +19084,7 @@ span .Clipboard {
 .tkzT-6b0__hp-ajdsfg-container.LwJ9ye8b__is-veryRoundBordered .nQ2FdF1o__OrderSummaryContainer {
     border-radius: var(--very-rounded);
 }
-:roots {
+:root {
     --wallet-button-height: 44px;
 }
 .PaymentRequestOrHeader {
@@ -19232,7 +19232,7 @@ span .Clipboard {
 .hp-ajdsfg-Container.is-embedded .InvalidSession {
     margin: var(--space-9) 0;
 }
-:roots {
+:root {
     --default-transition: 0.2s ease;
     --button-height: 44px;
     --button-hover-background-color: rgb(0, 94, 187);
@@ -19413,7 +19413,7 @@ span .Clipboard {
         display: none;
     }
 }
-:roots {
+:root {
     --checkout-background-shadow: 15px 0 30px 0 rgba(0, 0, 0, 0.18);
     --checkout-background-shadow-flipped: -15px 0 30px 0 rgba(0, 0, 0, 0.18);
     --checkout-hp-ajdsfg-vertical-padding: 48px;
