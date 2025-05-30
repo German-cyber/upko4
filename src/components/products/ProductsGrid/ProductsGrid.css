@@ -259,7 +259,7 @@
 
 .remove-from-wishlist-button svg {
   fill: #878787;
-  margin-left: 1.9px;
+  margin-left: 4px;
   transition: all .2s ease-in;
 }
 
@@ -277,6 +277,18 @@
   top:50%;
   left:50%;
   transform:translate(-50%, -50%);
+}
+
+.wishlist-empty-wrapepr h2{
+  color: #222;
+  font-size: 18px;
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+
+.wishlist-empty-wrapepr p{
+  font-size: 14px;
+  color: #666666;
 }
 
 .wishlist-empty-wrapepr svg {
