@@ -63,7 +63,7 @@ const ProductsGrid: React.FC = () => {
     <div className="container">
       <div className="filter_wrapper">
         <div className="filter-button" onClick={() => dispatch(toggleFilter())}>
-          {/* ... SVG ... */}
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="16" height="16"><path d="M324.4 64C339.6 64 352 76.37 352 91.63C352 98.32 349.6 104.8 345.2 109.8L240 230V423.6C240 437.1 229.1 448 215.6 448C210.3 448 205.2 446.3 200.9 443.1L124.7 385.6C116.7 379.5 112 370.1 112 360V230L6.836 109.8C2.429 104.8 0 98.32 0 91.63C0 76.37 12.37 64 27.63 64H324.4zM144 224V360L208 408.3V223.1C208 220.1 209.4 216.4 211.1 213.5L314.7 95.1H37.26L140 213.5C142.6 216.4 143.1 220.1 143.1 223.1L144 224zM496 400C504.8 400 512 407.2 512 416C512 424.8 504.8 432 496 432H336C327.2 432 320 424.8 320 416C320 407.2 327.2 400 336 400H496zM320 256C320 247.2 327.2 240 336 240H496C504.8 240 512 247.2 512 256C512 264.8 504.8 272 496 272H336C327.2 272 320 264.8 320 256zM496 80C504.8 80 512 87.16 512 96C512 104.8 504.8 112 496 112H400C391.2 112 384 104.8 384 96C384 87.16 391.2 80 400 80H496z"></path></svg>
           Filter
         </div>
         <select name="featured" id="featured">
@@ -96,7 +96,7 @@ const ProductsGrid: React.FC = () => {
                   onClick={(e) => handleAddToWishlist(e, p)}
                   style={{ cursor: "pointer" }}
                 >
-                  {/* ... Heart SVG ... */}
+                  <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M11 19C11 19 3 13.5 3 8.5C3 5.5 5.5 3 8.5 3C10.1 3 11 4.5 11 4.5C11 4.5 11.9 3 13.5 3C16.5 3 19 5.5 19 8.5C19 13.5 11 19 11 19Z" stroke="currentColor" stroke-width="2" fill="none"></path></svg>
                 </div>
 
                 <img
@@ -139,7 +139,6 @@ const ProductsGrid: React.FC = () => {
 
       {filteredProducts.length < 1 && (
         <h1 className="error-text">
-          {/* ... Error SVG ... */}
           No products were found matching your selection
         </h1>
       )}
