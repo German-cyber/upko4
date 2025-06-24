@@ -32,7 +32,6 @@ export interface ProductData {
 export const getProductDataByIndex = (
   index: number
 ): ProductData | undefined => {
-  console.log(productData.find((p) => p.index === index))
   return productData.find((p) => p.index === index);
 };
 

@@ -30,7 +30,7 @@ const ProductsGrid: React.FC = () => {
     dispatch(
       addItem({
         id: product.index,
-        selectedBesidesIndex: 0, // ✅ добавь это поле
+        selectedBesidesIndex: 0,
         title: product.title,
         price: product.newPrice || product.price || "",
         quantity: 1,
@@ -45,7 +45,7 @@ const ProductsGrid: React.FC = () => {
     product: (typeof products)[0]
   ) => {
     e.preventDefault();
-    e.stopPropagation();  // Останавливаем всплытие события
+    e.stopPropagation();
     if (isInWishlist(product.index)) {
       navigate("/wishlist");
     } else {
@@ -53,11 +53,11 @@ const ProductsGrid: React.FC = () => {
     }
   };
 
-  const filteredProducts = products.filter(product => {
-    const priceStr = (product.newPrice ?? product.price) ?? "";
-    const price = parseFloat(priceStr.replace(/[^0-9.]/g, ''));
-    return price >= priceRange[0] && price <= priceRange[1];
-  });
+const filteredProducts = products.filter(product => {
+  const priceStr = (product.newPrice ?? product.price) ?? "";
+  const price = parseFloat(priceStr.replace(/[^0-9.]/g, ''));
+  return price >= priceRange[0] && price <= priceRange[1] && product.show !== false;
+});
 
   return (
     <div className="container">
@@ -96,7 +96,7 @@ const ProductsGrid: React.FC = () => {
                   onClick={(e) => handleAddToWishlist(e, p)}
                   style={{ cursor: "pointer" }}
                 >
-                  <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M11 19C11 19 3 13.5 3 8.5C3 5.5 5.5 3 8.5 3C10.1 3 11 4.5 11 4.5C11 4.5 11.9 3 13.5 3C16.5 3 19 5.5 19 8.5C19 13.5 11 19 11 19Z" stroke="currentColor" stroke-width="2" fill="none"></path></svg>
+                  <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M11 19C11 19 3 13.5 3 8.5C3 5.5 5.5 3 8.5 3C10.1 3 11 4.5 11 4.5C11 4.5 11.9 3 13.5 3C16.5 3 19 5.5 19 8.5C19 13.5 11 19 11 19Z" stroke="currentColor" strokeWidth="2" fill="none"></path></svg>
                 </div>
 
                 <img

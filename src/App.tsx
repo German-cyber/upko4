@@ -1,7 +1,6 @@
-import React from "react";
 import { useSelector } from "react-redux";
-// import { Routes, Route, HashRouter } from "react-router-dom";
 import { RootState } from "./store/store";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { Cart } from "./components/Cart/Cart";
 import DiscountBanner from "./components/DiscountBanner";
 import Header from "./components/Header";
@@ -11,7 +10,6 @@ import Products from "./pages/Products";
 import ProductItemPage from "./pages/ProductItemPage";
 import ScrollToTop from "./utils/ScrollToTop/ScrollToTop";
 import ExampleConfetti from "./components/Confeti/ExampleConfetti";
-import "./App.css";
 import FixedCart from "./components/Cart/FixedCart/FixedCart";
 import AboutUs from "./pages/AboutUs";
 import ContactUs from "./pages/ContactUs";
@@ -22,25 +20,48 @@ import TermsOfService from "./pages/TermsOfService";
 import Faq from "./pages/Faq";
 import Wishlist from "./pages/Wishlist";
 import { Filter } from "./components/Filter/Filter";
-
-
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import StarterPopup from "./components/starterPopup/StarterPopup";
+import StarterPopupButton from "./components/starterPopup/StarterPopupButton";
+import "./App.css";
+import { useStarterPopup } from "./components/starterPopup/useStarterPopup";
 
 const App: React.FC = () => {
   const items = useSelector((state: RootState) => state.cart.items);
-
   const totalPrice = items.reduce((total, item) => {
-  const price = parseFloat(item.price.replace(/[^0-9.]/g, '')) || 0;
-  return total + price * item.quantity;
-}, 0);
+    const price = parseFloat(item.price.replace(/[^0-9.]/g, "")) || 0;
+    return total + price * item.quantity;
+  }, 0);
+
+  const {
+    timeLeft,
+    isMounted,
+    isVisible,
+    setIsMounted,
+    setIsVisible,
+    handleClose,
+    formatTime,
+    showButton,
+  } = useStarterPopup();
 
   return (
     <Router>
       <ScrollToTop />
       <div style={{ background: "#fff", minHeight: "100vh" }}>
+        {isMounted && (
+          <StarterPopup
+            isMounted={isMounted}
+            setIsMounted={setIsMounted}
+            isVisible={isVisible}
+            setIsVisible={setIsVisible}
+            handleClose={handleClose}
+            timeLeft={timeLeft}
+            formatTime={formatTime}
+          />
+        )}
+
         <DiscountBanner />
         <Header />
-        <FixedCart/>
+        <FixedCart />
         {totalPrice > 98 && <ExampleConfetti />}
         <Routes>
           <Route path="/" element={<Home />} />
@@ -53,12 +74,13 @@ const App: React.FC = () => {
           <Route path="/terms-of-service" element={<TermsOfService />} />
           <Route path="/faq" element={<Faq />} />
           <Route path="/wishlist" element={<Wishlist />} />
-
           <Route path="/product/:slug/:index" element={<ProductItemPage />} />
         </Routes>
         <Footer />
         <Cart />
-        <Filter/>
+
+        {showButton && <StarterPopupButton onClick={() => setIsVisible(true)} />}
+        <Filter />
       </div>
     </Router>
   );

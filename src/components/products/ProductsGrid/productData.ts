@@ -1195,6 +1195,16 @@ const productData = [
     price: "",
     slug: "ueros-nexus-power-sex-machine",
   },
+  {
+    index: 88,
+    img: "/images/starter-pack.jpg",
+    imgHover: "/images/starter-pack.jpg",
+    title: `Starter Kit "Maximum Pleasure"`,
+    price: "$75.00",
+    newPrice: "$9.99",
+    slug: `Starter Kit "Maximum Pleasure"`,
+    show: false,
+  },
 ];
 
 export default productData;

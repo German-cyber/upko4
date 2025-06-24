@@ -232,6 +232,17 @@ const products = [
     slug: "upko-role-play-costume-collection-nurse",
     index: 75,
   },
+  {
+    img: "",
+    name: "START",
+    hoverImg: "",
+    oldPrice: "$0",
+    price: "$0",
+    discount: "-12%",
+    tab: 'START',
+    slug: "START",
+    index: 88
+  },
 
   //
   {
